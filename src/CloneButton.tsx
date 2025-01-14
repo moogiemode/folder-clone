@@ -21,9 +21,7 @@ export const CloneButton: FC<CloneButtonProps> = ({ sourceFolderPath, outputFold
 
     (document.getElementById('my_modal_1') as HTMLDialogElement).showModal();
     await cloneDir(sourceFolderPath, outputFolderPath, new Set(fileExtensions));
-
     setCloning(false);
-    console.log('SHOULD BE ALL DONE HERE');
   };
 
   const cloneDir = async (sourceFolderPath: string, outputFolderPath: string, extToClone?: Set<string>) => {
